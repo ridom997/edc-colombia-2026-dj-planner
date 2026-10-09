@@ -13,7 +13,7 @@ USE
 2. Choose my DJs → hour → tap + in priority order. Tap a number to remove it.
 3. A chosen DJ continues into later hours. Skip this hour affects only this hour. Resume restores it. New choices start at priority 1.
 4. View set times → event, personal or group → List / Timeline. Tap any timeline block for full details. Use − / + to zoom (50–160%); text stays the same size.
-5. Export my choices → send the agreed JSON → both Import final plan. Personal choices stay separate. No automatic merge or sync.
+5. Export my choices → share the JSON contents → Import final plan → paste the JSON → Validate and import. Confirm to save. Your personal choices are preserved.
 
 SAVE
 Choices save automatically. Close and reopen in airplane mode before the event. Export a backup before replacing the script or deleting the host app.

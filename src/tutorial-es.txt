@@ -13,7 +13,7 @@ USAR
 2. Elegir mis DJs → hora → toca + en orden de prioridad. Toca un número para quitarlo.
 3. El DJ elegido continúa en las horas siguientes. Quitar esta hora afecta solo esa hora. Retomar lo restaura. Las nuevas elecciones empiezan en prioridad 1.
 4. Visualizar set times → evento, personales o grupo → Lista / Timeline. Toca cualquier recuadro para ver toda la información. Usa − / + para el zoom (50–160%); las letras no se encogen.
-5. Exportar mis elecciones → envía el JSON acordado → ambos Importar plan final. Las elecciones personales siguen separadas. No hay mezcla ni sincronización automática.
+5. Exportar mis elecciones → comparte el contenido del JSON → Importar plan final → pega el JSON → Validar e importar. Confirma para guardar. Tus elecciones personales se conservan.
 
 GUARDAR
 Las elecciones se guardan automáticamente. Cierra y reabre en modo avión antes del evento. Exporta un respaldo antes de cambiar el script o borrar la aplicación anfitriona.

@@ -1,1 +1,3 @@
-PASS 67 security assertions. Not an antivirus scan or proof of complete security.
+PASS 64 security assertions. Not an antivirus scan or proof of complete security.
+PASS Scriptable text prompt: paste, invalid JSON, wrong event/IDs, size limit, cancellation, correction, confirmation, personal preservation.
+PASS Android multiline dialog: paste, invalid JSON, wrong event/IDs, size limit, cancellation, correction, confirmation, personal preservation.

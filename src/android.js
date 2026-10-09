@@ -6,7 +6,9 @@ function edcAndroidRuntime(){
  readString:p=>app.ReadFile(p,'UTF-8'),writeString:(p,s)=>app.WriteFile(p,s,'','UTF-8'),
  fileSize:p=>app.GetFileSize(p)/1000};
  class AndroidAlert{
-  constructor(){this.actions=[];this.title='';this.message='';this.cancel=null;}
+  constructor(){this.actions=[];this.title='';this.message='';this.cancel=null;this.fields=[];}
+  addTextField(placeholder,text=''){this.fields.push({placeholder,text,control:null});}
+  textFieldValue(i){const f=this.fields[i];return f.control?f.control.GetText():f.text;}
   addAction(s){this.actions.push(s);}addCancelAction(s){this.cancel=s;}
   presentAlert(){return this.presentSheet();}
   presentSheet(){return new Promise(resolve=>{
@@ -14,6 +16,7 @@ function edcAndroidRuntime(){
    const scroll=app.CreateScroller(.88,.70),body=app.CreateLayout('Linear','Vertical');
    scroll.AddChild(body);lay.AddChild(scroll);dlg.AddLayout(lay);
    const txt=app.CreateText(this.message,.82,-1,'Multiline,Left');txt.SetTextSize(15);body.AddChild(txt);
+   for(const field of this.fields){const edit=app.CreateTextEdit(field.text,.82,.28,'Multiline,Left');edit.SetTextSize(14);field.control=edit;body.AddChild(edit);}
    let done=false;const finish=n=>{if(done)return;done=true;dlg.Dismiss();resolve(n);};
    this.actions.forEach((label,i)=>{const b=app.CreateButton(label,.82,-1);b.SetOnTouch(()=>finish(i));body.AddChild(b);});
    if(this.cancel!==null){const b=app.CreateButton(this.cancel,.82,-1);b.SetOnTouch(()=>finish(-1));body.AddChild(b);}
