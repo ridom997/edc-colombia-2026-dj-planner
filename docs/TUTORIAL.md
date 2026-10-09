@@ -56,6 +56,12 @@ Descarga [el JS completo](../DJs_EDC_Colombia_2026.js) con **Download raw file**
 
 ## Share with friends / Compartir con amigos
 
-![App summary and quick installation](images/compartir-app.png)
+### English
+
+![App summary and quick installation](images/share-app.png)
+
+### Español
+
+![Resumen de la aplicación e instalación rápida](images/compartir-app-es.png)
 
 AI-generated promotional illustration, not a screenshot. / Ilustración promocional generada con IA, no una captura.

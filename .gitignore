@@ -1,0 +1,7 @@
+__pycache__/
+*.zip
+src/preview.html
+src/DJs_EDC_Colombia_2026.js
+src/hashes.json
+Choices_*.json
+Final_*.json

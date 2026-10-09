@@ -13,7 +13,7 @@
 
 **Security:** no tracking, remote code or npm packages in the app. Automated checks and source review are included; this is **not an antivirus certification**. [Security review](SECURITY.md) · [Verify file hashes](SHA256SUMS.txt).
 
-[More help](docs/TUTORIAL.md) · [Image to share](docs/images/compartir-app.png)
+[More help](docs/TUTORIAL.md) · [Image to share](docs/images/share-app.png)
 
 ---
 
@@ -30,7 +30,7 @@
 
 **Seguridad:** la app no incluye rastreo, código remoto ni paquetes npm. Incluye revisión de código y pruebas automáticas; **no es una certificación antivirus**. [Revisión](SECURITY.md) · [Verificar huellas](SHA256SUMS.txt).
 
-[Más ayuda](docs/TUTORIAL.md) · [Imagen para compartir](docs/images/compartir-app.png)
+[Más ayuda](docs/TUTORIAL.md) · [Imagen para compartir](docs/images/compartir-app-es.png)
 
 ---
 
