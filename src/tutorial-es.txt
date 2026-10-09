@@ -1,0 +1,28 @@
+DJs EDC Colombia 2026 — SIN INTERNET
+Instrucciones en inglés y español. Inglés primero; español en esta sección.
+
+DESCARGA CON CUIDADO
+Usa solo el proyecto publicado en github.com/ridom997/edc-colombia-2026-dj-planner. Descarga el archivo original DJs_EDC_Colombia_2026.js, no la página de GitHub.
+
+INSTALAR
+IPHONE: Instala Scriptable desde App Store. Importa el JS y ejecútalo dentro de Scriptable. Si no puedes importar: + → pega TODO el archivo → guarda → ejecuta.
+ANDROID: Instala DroidScript: JS and Python IDE de droidscript.org desde Google Play. Crea un proyecto Native JavaScript. Reemplaza todo el ejemplo del JS principal por TODO el archivo descargado. Guarda → Run. Reutiliza el mismo proyecto.
+
+USAR
+1. Abrir horarios → elige el día.
+2. Elegir mis DJs → hora → toca + en orden de prioridad. Toca un número para quitarlo.
+3. El DJ elegido continúa en las horas siguientes. Quitar esta hora afecta solo esa hora. Retomar lo restaura. Las nuevas elecciones empiezan en prioridad 1.
+4. Visualizar set times → evento, personales o grupo → Lista / Timeline. Toca cualquier recuadro para ver toda la información. Usa − / + para el zoom (50–160%); las letras no se encogen.
+5. Exportar mis elecciones → envía el JSON acordado → ambos Importar plan final. Las elecciones personales siguen separadas. No hay mezcla ni sincronización automática.
+
+GUARDAR
+Las elecciones se guardan automáticamente. Cierra y reabre en modo avión antes del evento. Exporta un respaldo antes de cambiar el script o borrar la aplicación anfitriona.
+
+SEGURIDAD
+El planificador no descarga código ni incluye rastreo o paquetes npm. El JSON se valida como datos y nunca se ejecuta. La aplicación anfitriona tiene sus propias políticas. No se certifica ausencia de virus ni de vulnerabilidades. Las pruebas usan APIs simuladas, no teléfonos físicos.
+La SHA-256 siguiente revisa el bloque de código, no esta guía ni la cabecera. Detecta cambios, pero no es una firma; un archivo editado también puede alterar su verificador. Compara la huella del archivo completo publicada con el proyecto confiable de GitHub.
+
+CRÉDITOS Y CUIDADO
+Todo el aplicativo fue generado por inteligencia artificial (ChatGPT).
+Instagram @pedroridz997 · github.com/ridom997.
+Herramienta independiente y no oficial. EDC, organizadores, artistas y Spotify conservan sus derechos. Los horarios pueden cambiar y la app puede tener fallos. Spotify y las descargas iniciales necesitan internet; los horarios y elecciones funcionan offline. Creada para ayudarles. Cuídense, respeten a los demás y que les vaya muy bien. ¡Bendiciones para todos!
