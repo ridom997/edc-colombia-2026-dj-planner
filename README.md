@@ -48,3 +48,8 @@ Independent / No oficial. EDC, organizadores, artistas y Spotify conservan sus d
 **Import final plan:** paste the complete JSON into the text box → Validate and import → confirm. Invalid JSON is rejected without replacing your plan.
 
 **Importar plan final:** pega el JSON completo en el recuadro → Validar e importar → confirma. Un JSON inválido no sustituye tu plan.
+
+
+**Save a timeline image:** View set times → My set times or Final group → choose a day → Export timeline as image → Save / share image. One image of the selected day, offline.
+
+**Guardar imagen timeline:** Visualizar set times → Mis set times o Grupo final → elige el día → Exportar timeline como imagen → Guardar / compartir imagen. Una imagen del día seleccionado, sin internet.

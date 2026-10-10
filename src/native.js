@@ -18,9 +18,12 @@ async function alertMessage(title,msg){const a=new Alert();a.title=title;a.messa
 async function confirm(msg){const a=new Alert();a.title=APP;a.message=msg;a.addAction(t('yes'));a.addCancelAction(t('cancel'));return await a.presentAlert()===0;}
 function getProfiles(){return {mine:read('mine')?.state||C.empty(),final:read('final')?.state||C.empty(),other:read('other')?.state||null};}
 let finalImported=fm.fileExists(path('final-imported.json'))||!!Object.keys(read('final')?.state?.choices||{}).length;
-async function planner(){const web=new WebView();let spotifyBusy=false,loading=true;
+async function planner(){const web=new WebView();let spotifyBusy=false,loading=true,pngTransfer=null;
  web.shouldAllowRequest=req=>{const url=req&&req.url;if(typeof url!=='string')return false;if(!url.startsWith('edcapp://message?data='))return url==='about:blank'||(loading&&/^(file:|data:text\/html)/.test(url));let msg,error=null;try{if(url.length>180000)throw Error(t('invalid'));msg=JSON.parse(decodeURIComponent(url.slice(url.indexOf('data=')+5)));if(!msg||typeof msg!=='object'||Array.isArray(msg))throw Error(t('invalid'));
- if(msg.type==='save'){
+ if(msg.type==='pngStart'){if(!['mine','final'].includes(msg.source)||!DATA.days.some(d=>d.id===msg.day)||!Number.isSafeInteger(msg.part)||msg.part<1||msg.part>100||!Number.isSafeInteger(msg.length)||msg.length<32||msg.length>6000000)throw Error(t('invalid'));pngTransfer={source:msg.source,day:msg.day,part:msg.part,length:msg.length,data:''};
+ }else if(msg.type==='pngChunk'){if(!pngTransfer||msg.offset!==pngTransfer.data.length||typeof msg.data!=='string'||!msg.data.length||msg.data.length>40000||!/^[A-Za-z0-9+/=]+$/.test(msg.data)||pngTransfer.data.length+msg.data.length>pngTransfer.length)throw Error(t('invalid'));pngTransfer.data+=msg.data;
+ }else if(msg.type==='pngEnd'){const png=pngTransfer;pngTransfer=null;if(!png||png.data.length!==png.length||!png.data.startsWith('iVBORw0KGgo')||png.data.length%4!==0)throw Error(t('invalid'));const file=path('EDC_'+png.source+'_'+png.day+'_'+png.part+'.png');if(typeof fm.writePNG==='function')fm.writePNG(file,png.data);else fm.write(file,Data.fromBase64String(png.data));ShareSheet.present([file]).catch(e=>alertMessage(t('error'),String(e)));
+ }else if(msg.type==='save'){
   if(!Number.isSafeInteger(msg.revision)||msg.revision<1||!msg.profiles)throw Error(t('invalid'));
   const mine=C.validate(msg.profiles.mine),next=C.settings(msg.settings);
   write('mine',mine);fm.writeString(path('v5-settings.json'),JSON.stringify(next));prefs=next;

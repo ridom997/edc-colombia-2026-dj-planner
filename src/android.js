@@ -4,6 +4,7 @@ function edcAndroidRuntime(){
  const fm={documentsDirectory:()=>base,joinPath:(a,b)=>a+'/'+b,
  fileExists:p=>app.FileExists(p)||app.FolderExists(p),createDirectory:p=>app.MakeFolder(p),
  readString:p=>app.ReadFile(p,'UTF-8'),writeString:(p,s)=>app.WriteFile(p,s,'','UTF-8'),
+ writePNG:(p,data)=>{const img=app.CreateImage(null,-1,-1);try{img.SetPixelData(data,-1,-1,'pngbase64');img.Save(p);}finally{if(typeof app.DestroyImage==='function')app.DestroyImage(img);}},
  fileSize:p=>app.GetFileSize(p)/1000};
  class AndroidAlert{
   constructor(){this.actions=[];this.title='';this.message='';this.cancel=null;this.fields=[];}

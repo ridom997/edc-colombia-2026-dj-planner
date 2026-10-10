@@ -1,3 +1,5 @@
-PASS 64 security assertions. Not an antivirus scan or proof of complete security.
-PASS Scriptable text prompt: paste, invalid JSON, wrong event/IDs, size limit, cancellation, correction, confirmation, personal preservation.
-PASS Android multiline dialog: paste, invalid JSON, wrong event/IDs, size limit, cancellation, correction, confirmation, personal preservation.
+PASS 64 security assertions.
+PASS single-image selected-day timeline PNG export, personal/group isolation, native transfer and path validation (simulated).
+PASS JSON import validation on simulated Scriptable and DroidScript APIs.
+PASS Chromium desktop save/reopen, language and backup restoration.
+Not an antivirus certification. No physical phone testing.
